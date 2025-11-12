@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sosAlertFragment">
+
+    <fragment
+        android:id="@+id/sosAlertFragment"
+        android:name="com.nitesh.healthmate.fragments.SOSAlertFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_s_o_s_alert" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/hospitalsFragment"
+        android:name="com.nitesh.healthmate.fragments.HospitalsListFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_hospitals_list">
+        <action
+            android:id="@+id/action_book_appointment"
+            app:destination="@id/bookAppointmentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bookAppointmentFragment"
+        android:name="com.nitesh.healthmate.fragments.BookHospitalAppointmentFragment"
+        android:label="fragment_landing_new"
+        tools:layout="@layout/fragment_book_hospital_appointment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeRemedies"
+        android:name="com.nitesh.healthmate.fragments.HomeRemediesFragment"
+        android:label="fragment_landing"
+        tools:layout="@layout/fragment_home_remedies" >
+    </fragment>
+</navigation>

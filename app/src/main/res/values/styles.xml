@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomActionBarTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/CustomActionBarStyle</item>
+    </style>
+
+    <style name="CustomActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="background">@color/button_green_start</item>
+        <item name="titleTextStyle">@style/CustomActionBarTitle</item>
+    </style>
+
+    <style name="CustomActionBarStyleNoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="background">@color/button_green_start</item>
+        <item name="titleTextStyle">@style/CustomActionBarTitle</item>
+    </style>
+
+    <style name="Theme.HealthMateupdate" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Material Design color scheme -->
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Colored</item>
+
+        <!-- Required for Material pickers -->
+        <item name="materialTimePickerStyle">@style/Widget.MaterialComponents.TimePicker</item>
+        <item name="materialCalendarMonth">@style/Widget.MaterialComponents.MaterialCalendar</item>
+    </style>
+
+
+    <style name="CustomActionBarTitle" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/purple_500</item>
+    </style>
+
+
+    <style name="CustomAlertDialog" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowElevation">8dp</item>
+    </style>
+
+</resources>

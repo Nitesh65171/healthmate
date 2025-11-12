@@ -1,28 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login_screen"
+    android:padding="24dp"
+    tools:context=".activities.LoginActivity">
 
-    <EditText
+    <!-- App Icon -->
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/app_icon"
+        android:contentDescription="@string/app_name"
+        android:background="@drawable/circle_white_bg"
+        android:elevation="6dp"
+        android:padding="16dp" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back!"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Subtitle -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login to continue your health journey"
+        android:textSize="14sp"
+        android:textColor="#558B2F"
+        android:layout_marginTop="4dp"/>
+
+    <!-- Input Fields -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter username"
-        android:id="@+id/user_name_ed"/>
+        android:layout_marginTop="32dp"
+        android:orientation="vertical">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter password"
-        android:layout_marginTop="10dp"
-        android:id="@+id/password_ed"/>
+        <EditText
+            android:id="@+id/user_name_ed"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/enter_username"
+            android:padding="12dp"
+            android:textColorHint="#888888"
+            android:background="@drawable/edit_text_background"
+            android:inputType="textEmailAddress"/>
 
+        <EditText
+            android:id="@+id/password_ed"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:hint="@string/enter_password"
+            android:padding="12dp"
+            android:textColorHint="#888888"
+            android:background="@drawable/edit_text_background"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <!-- Login Button -->
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/login_btn"
-        android:text="Login"
-        android:layout_marginTop="10dp"
-        android:textAllCaps="false"/>
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/login"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_gradient_green"/>
+
+    <!-- Sign Up -->
+    <TextView
+        android:id="@+id/sign_up_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Don’t have an account? Sign Up"
+        android:textStyle="italic"
+        android:textColor="#1B5E20"/>
 
 </LinearLayout>

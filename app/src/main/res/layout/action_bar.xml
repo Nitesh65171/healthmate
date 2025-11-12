@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/action_bar_bg"
+    android:paddingBottom="@dimen/medium_dimen"
+    android:paddingStart="@dimen/medium_dimen">
+
+    <ImageView
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:id="@+id/menu_options"
+        android:layout_centerVertical="true"
+        android:src="@drawable/hamburger_menu"
+        android:layout_alignParentStart="true"
+        android:contentDescription="Select menu" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Custom Action Bar"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="@dimen/dp40"
+       android:layout_alignLeft="@+id/menu_options"
+        android:layout_centerVertical="true"/>
+
+   <LinearLayout
+       android:layout_width="@dimen/extra_large_dimen"
+       android:layout_height="wrap_content"
+       android:layout_alignParentEnd="true"
+       android:orientation="vertical"
+       android:gravity="center_horizontal"
+       android:layout_centerVertical="true"
+       android:layout_marginBottom="@dimen/dp2"
+       android:layout_marginEnd="@dimen/small_dimen"
+       android:id="@+id/logout_anim_ll">
+       <com.airbnb.lottie.LottieAnimationView
+           android:id="@+id/logout_anim"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:layout_gravity="center_horizontal"
+           app:lottie_autoPlay="true"
+           app:lottie_loop="true"
+           app:lottie_rawRes="@raw/logout_lottie_json" />
+
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:lines="1"
+           android:textAlignment="center"
+           android:text="Logout text"/>
+   </LinearLayout>
+
+</RelativeLayout>
