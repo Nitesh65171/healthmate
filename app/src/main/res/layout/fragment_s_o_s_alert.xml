@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_background"
+    tools:context=".fragments.SOSAlertFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/emergency_alert_title"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/dp30"
+                android:text="Emergency help needed ?"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/alert_action_button"
+                android:layout_width="@dimen/dp200"
+                android:layout_height="@dimen/dp200"
+                android:layout_gravity="center_horizontal"
+                android:textAllCaps="false"
+                android:background="@drawable/rounded_red_button"
+                android:backgroundTint="@null"
+                android:text="SOS ?\nTap here"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:elevation="8dp"
+                android:layout_marginTop="@dimen/large_dimen" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#aba9a9"
+                android:layout_marginTop="@dimen/medium_dimen"
+                android:layout_below="@+id/alert_action_button"
+                android:id="@+id/screen_devider"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/large_dimen"
+                android:layout_marginTop="@dimen/large_dimen">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sos_contact_detail_heading_parent"
+                    android:weightSum="10"
+
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:lines="2"
+                        android:layout_weight="3"
+                        android:textColor="@color/black"
+                        android:id="@+id/sos_contact_detail_heading"
+                        android:text="Emergency contact details"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:text="Edit"
+                        android:textAllCaps="false"
+                        android:backgroundTint="@null"
+                        android:textSize="14sp"
+                        android:layout_weight="7"
+                        android:background="@drawable/button_bg"/>
+                </LinearLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/volunteer_name_text"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_gray"
+                    android:layout_below="@+id/sos_contact_detail_heading_parent"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:layout_marginStart="@dimen/large_dimen"
+                    android:text="Volunteer name: "/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/volunteer_name_value"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"
+                    android:layout_marginLeft="@dimen/medium_dimen"
+                    android:layout_below="@+id/sos_contact_detail_heading_parent"
+                    android:layout_marginTop="@dimen/medium_dimen"
+                    android:layout_toRightOf="@+id/volunteer_name_text"
+                    android:text="Nitesh Sharma"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#aba9a9"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:layout_below="@+id/volunteer_name_value"
+                    android:id="@+id/devider1"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contact_number_text"
+                    android:layout_marginStart="@dimen/large_dimen"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:textColor="@color/dark_gray"
+                    android:layout_below="@+id/devider1"
+                    android:textSize="12sp"
+                    android:text="Contact: "/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/contact_number_value"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textAlignment="textEnd"
+                    android:layout_marginLeft="@dimen/medium_dimen"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:layout_below="@+id/devider1"
+                    android:layout_toRightOf="@+id/contact_number_text"
+                    android:text="8787655650"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#aba9a9"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:layout_below="@+id/contact_number_value"
+                    android:id="@+id/devider2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/address_text"
+                    android:textColor="@color/dark_gray"
+                    android:layout_marginStart="@dimen/large_dimen"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:layout_below="@+id/devider2"
+                    android:textSize="12sp"
+                    android:text="Address: "/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/address_value"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="@dimen/medium_dimen"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:layout_below="@+id/devider2"
+                    android:layout_toRightOf="@+id/address_text"
+                    android:text="House 120 Road no 2, near Apex complex"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#aba9a9"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:layout_below="@+id/address_value"
+                    android:id="@+id/devider3"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_location_text"
+                    android:layout_marginStart="@dimen/large_dimen"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:layout_below="@+id/devider3"
+                    android:textSize="12sp"
+                    android:textColor="@color/dark_gray"
+                    android:text="Current location: "/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/current_location_value"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="@dimen/medium_dimen"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textAlignment="textEnd"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:layout_below="@+id/devider3"
+                    android:layout_toRightOf="@+id/current_location_text"
+                    android:text="Desh Deepak School,\n27.158737, 78.010010"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#aba9a9"
+                    android:layout_marginTop="@dimen/small_dimen"
+                    android:layout_below="@+id/current_location_value"
+                    android:id="@+id/devider4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/location_disclaimer_text"
+                    android:layout_marginTop="@dimen/large_dimen"
+                    android:layout_below="@+id/devider4"
+                    android:textSize="12sp"
+                    android:maxLines="2"
+                    android:textColor="#fa2d53"
+                    android:text="*This current location will be updated based on the GPS connectivity can varry for some meter.\nThis will be update once SOS process starts."/>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</FrameLayout>
