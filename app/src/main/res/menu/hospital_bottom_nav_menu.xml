@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/requestListFragment"
+        android:icon="@drawable/request_icon"
+        android:title="Requests" />
+
+    <item
+        android:id="@+id/customerListFragment"
+        android:icon="@drawable/customer_placeholder"
+        android:title="Patients" />
+
+    <item
+        android:id="@+id/doctorsListFragment"
+        android:icon="@drawable/doctor_icon"
+        android:title="Doctors" />
+    <item
+        android:id="@+id/ambulestListFragment"
+        android:icon="@drawable/ambulence_icon"
+        android:title="Ambulence" />
+</menu>

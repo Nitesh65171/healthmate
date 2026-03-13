@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/requestListFragment">
+
+    <fragment
+        android:id="@+id/customerListFragment"
+        android:name="com.nitesh.healthmate.hospitalsection.fragment.CustomerListFragment"
+        android:label="fragment_customer"
+        tools:layout="@layout/fragment_customer_list" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorsListFragment"
+        android:name="com.nitesh.healthmate.hospitalsection.fragment.DoctorsListFragment"
+        android:label="fragment_doctor"
+        tools:layout="@layout/fragment_doctors_list" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/ambulestListFragment"
+        android:name="com.nitesh.healthmate.hospitalsection.fragment.AmbulenceListFragment"
+        android:label="fragment_ambulence"
+        tools:layout="@layout/fragment_ambulence_list" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/requestListFragment"
+        android:name="com.nitesh.healthmate.hospitalsection.fragment.RequestListFragment"
+        android:label="fragment_progress_case"
+        tools:layout="@layout/fragment_ambulence_list" >
+        <action
+            android:id="@+id/action_request_details"
+            app:destination="@id/requestDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/requestDetailFragment"
+        android:name="com.nitesh.healthmate.hospitalsection.fragment.RequestDetailFragment"
+        android:label="fragment_request_details"
+        tools:layout="@layout/fragment_request_detail" >
+
+    </fragment>
+
+</navigation>

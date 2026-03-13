@@ -17,6 +17,10 @@
         <activity
             android:name=".activities.LandingActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".activities.HospitalLandingActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.LoginActivity"
             android:exported="true"

@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="@dimen/dp8"
+        android:padding="@dimen/dp16"
+        android:id="@+id/customer_parent_ll"
         android:gravity="center_vertical">
 
         <!-- Hospital Image -->
@@ -26,7 +27,6 @@
             android:src="@drawable/app_icon"
             android:background="@drawable/rounded_image_bg"
             android:elevation="2dp" />
-
         <!-- Right Section -->
         <LinearLayout
             android:id="@+id/product_detail_ll"
@@ -45,7 +45,7 @@
                 android:gravity="center_vertical">
 
                 <TextView
-                    android:id="@+id/order_id_lable"
+                    android:id="@+id/customer_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -55,7 +55,7 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:id="@+id/hospital_id"
+                    android:id="@+id/customer_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="HM12233"
@@ -67,7 +67,7 @@
 
             <!-- Hospital Name -->
             <TextView
-                android:id="@+id/hospital_name"
+                android:id="@+id/dignoaissue_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp6"
@@ -80,7 +80,7 @@
 
             <!-- Address -->
             <TextView
-                android:id="@+id/hospital_address_value"
+                android:id="@+id/customer_address_value"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp4"
@@ -101,35 +101,11 @@
                 android:textSize="14sp"
                 android:textStyle="bold" />
 
-            <!-- Rating -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp4"
-                android:orientation="horizontal"
-                android:id="@+id/rating_layout"
-                android:gravity="center_vertical">
-
-                <TextView
-                    android:id="@+id/rating_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="6dp"
-                    android:text="Rating:"
-                    android:textColor="@color/black"
-                    android:textSize="13sp" />
-
-                <RatingBar
-                    android:id="@+id/order_rating"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    style="?android:attr/ratingBarStyleSmall"
-                    android:numStars="5"
-                    android:rating="4.5"
-                    android:stepSize="0.5"
-                    android:isIndicator="true" />
-            </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="@dimen/dp8"
+        android:layout_height="match_parent"
+        android:id="@+id/severity_indicator_ll"
+        android:background="@color/red"/>
 </androidx.cardview.widget.CardView>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dp15"
+    android:orientation="vertical"
+    android:background="@drawable/screen_background"
+    tools:context="CustomerListFragment">
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/severity_filter_rg">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:id="@+id/all_customer"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/green"
+            android:text="Low Severity"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:id="@+id/low_severity"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="Medium Severity"
+            android:id="@+id/medium_severity"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:text="High Severity"
+            android:id="@+id/high_severity"/>
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp4"
+        android:id="@+id/customer_rv"/>
+
+
+</LinearLayout>

@@ -1,0 +1,28 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="#000000">
+
+    <!-- Ambulance body -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M3,13 L3,8 C3,7.45 3.45,7 4,7 L14,7 L18,11 L21,11 C21.55,11 22,11.45 22,12 L22,16 L20,16
+                          C20,17.66 18.66,19 17,19 C15.34,19 14,17.66 14,16 L10,16
+                          C10,17.66 8.66,19 7,19 C5.34,19 4,17.66 4,16 L3,16 Z"/>
+
+    <!-- Wheels -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M7,17 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0"/>
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M17,17 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0"/>
+
+    <!-- Medical cross -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M15,9h2v2h2v2h-2v2h-2v-2h-2v-2h2z"/>
+
+</vector>

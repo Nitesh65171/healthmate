@@ -39,7 +39,23 @@ class LoginActivity : BaseHealthmateActivity(), OnClickListener {
                 ).show()
                 return@setOnClickListener
             }
-            startLoginProcess()
+            when(username.toString().lowercase()){
+                "customer" -> {
+                    startLoginProcess()
+                }
+                "hospital" -> {
+                    startActivity(Intent(this, HospitalLandingActivity::class.java))
+                    finish()
+                }
+                else -> {
+                    Toast.makeText(
+                        applicationContext,
+                        "Invalid user name..!!",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+            //startLoginProcess()
 
 
         }
